@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #roket1{
+            margin-top: 0px;
+            margin-left: 400px;
+
+        }
+        #roket2{
+            width: 200px;
+            position: absolute;
+            margin-top: 0px;
+            margin-left: 400px;
+
+        }
+    </style>
+</head>
+<body stryle="margin: 0 auto" onkeypress="myFunc(event)">
+    <div style="
+    width: 100%;
+    background-image: url(galaxy.png);
+    background-size: contain;
+    height: 1500px;
+    "
+    >
+       <img id="roket1" src="roket1.png" />
+       <img id="roket2" src="roket2.webp" />
+    </div>
+    <script>
+        let roket1=document.getElementById("roket1")
+        let roket2=document.getElementById("roket2")
+        let top1 = 0;
+        let top2 = 0;
+        function myFunc(event) {
+            if (event.key == "d") {
+                top1 +=50;
+                roket1.style.marginTop = top1 + "px";
+        } else if (event.key == "l") {
+                top2 +=50;
+                roket2.style.marginTop = top2 + "px";
+        }
+        if (top1 > 550) {
+            alert("Эхний фуужин хожлоо");
+            roket1.style.marginTop = 0 + "px";
+            roket2.style.marginTop = 0 + "px";
+            top1 = 0;
+            top2 = 0;
+        } else if (top2 > 550) {
+            alert("Хоёр дугаар  фуужин хожлоо");
+            roket1.style.marginTop = 0 + "px";
+            roket2.style.marginTop = 0 + "px";
+            top1 = 0;
+            top2 = 0;
+        }
+        }
+            
+    
+
+    </script>
+</body>
+</html>
